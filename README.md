@@ -1,4 +1,4 @@
 - DocDoc is a comprehensive medical consultation application that provides users with easy access to healthcare professionals. The app includes a complete sign-up and sign-in process, allowing new users to register with their personal information and existing users to securely log in. Whether you're looking for quick medical advice or booking a full consultation, DocDoc offers a seamless experience tailored to your health needs.
 ----------------------------
-- here a system files design
+- here is a system files design
 - <img width="179" height="236" alt="DocDoc system design" src="https://github.com/user-attachments/assets/eb0601ae-010e-448d-8448-5116eb692b0e" />
