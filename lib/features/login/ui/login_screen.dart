@@ -2,6 +2,8 @@ import 'package:docdoc/core/helpers/spaces_helpers.dart';
 import 'package:docdoc/core/theming/text_styles.dart';
 import 'package:docdoc/core/widgets/app_button.dart';
 import 'package:docdoc/core/widgets/app_text_form_field.dart';
+import 'package:docdoc/features/login/ui/widgets/dont_have_account_text.dart';
+import 'package:docdoc/features/login/ui/widgets/terms_and_condations_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -39,6 +41,10 @@ class LoginScreen extends StatelessWidget {
                 ),
                 verticalSpace(32),
                 AppButton(onPressed: () {}, buttonText: 'Login'),
+                verticalSpace(32),
+                TermsAndCondationsText(),
+                verticalSpace(24),
+                DontHaveAccountText(),
               ],
             ),
           ),

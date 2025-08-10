@@ -1,6 +1,7 @@
 import 'package:docdoc/core/routing/routes.dart';
 import 'package:docdoc/features/login/ui/login_screen.dart';
 import 'package:docdoc/features/onboarding/ui/onboarding_screen.dart';
+import 'package:docdoc/features/sign_up/ui/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 
 abstract class AppRouter {
@@ -9,7 +10,7 @@ abstract class AppRouter {
       case Routes.onboardingScreen:
         return MaterialPageRoute(builder: (_) => OnboardingScreen());
       case Routes.signUpScreen:
-        return MaterialPageRoute(builder: (_) => OnboardingScreen());
+        return MaterialPageRoute(builder: (_) => SignUpScreen());
       case Routes.loginScreen:
         return MaterialPageRoute(builder: (_) => LoginScreen());
       default:
