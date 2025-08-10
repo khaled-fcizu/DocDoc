@@ -1,4 +1,6 @@
+import 'package:docdoc/core/helpers/extentions.dart';
 import 'package:docdoc/core/helpers/spaces_helpers.dart';
+import 'package:docdoc/core/routing/routes.dart';
 import 'package:docdoc/core/theming/text_styles.dart';
 import 'package:docdoc/core/widgets/app_button.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +21,12 @@ class TextAndGetStartedButton extends StatelessWidget {
             style: TextStyles.font11GrayRegular,
           ),
           verticalSpace(30),
-          AppButton(buttonText: 'Get Started', onPressed: () {}),
+          AppButton(
+            buttonText: 'Get Started',
+            onPressed: () {
+              context.pushNamed(Routes.loginScreen);
+            },
+          ),
         ],
       ),
     );
