@@ -18,7 +18,7 @@ class TextAndGetStartedButton extends StatelessWidget {
           Text(
             'Manage and schedule all of your medical appointments easily with Docdoc to get a new experience.',
             textAlign: TextAlign.center,
-            style: TextStyles.font11GrayRegular,
+            style: TextStyles.font13GrayRegular,
           ),
           verticalSpace(30),
           AppButton(

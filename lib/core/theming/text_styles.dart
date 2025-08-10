@@ -9,13 +9,13 @@ abstract class TextStyles {
     color: Colors.black,
     fontWeight: FontWeightHelper.bold,
   );
-  static TextStyle font11BlackMeduim = TextStyle(
+  static TextStyle font13DarkBlueMeduim = TextStyle(
     fontSize: 11.sp,
-    color: Colors.black,
+    color: ColorsManager.darkBlue,
     fontWeight: FontWeightHelper.medium,
   );
-  static TextStyle font11GrayRegular = TextStyle(
-    fontSize: 11.sp,
+  static TextStyle font13GrayRegular = TextStyle(
+    fontSize: 13.sp,
     color: ColorsManager.gray,
     fontWeight: FontWeightHelper.regular,
   );
@@ -43,6 +43,11 @@ abstract class TextStyles {
     fontSize: 12.sp,
     color: ColorsManager.mainBlue,
     fontWeight: FontWeightHelper.regular,
+  );
+  static TextStyle font13MainBlueSemiBold = TextStyle(
+    fontSize: 13.sp,
+    color: ColorsManager.mainBlue,
+    fontWeight: FontWeightHelper.semiBold,
   );
   static TextStyle font24MainBlueBold = TextStyle(
     fontSize: 24.sp,
