@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:docdoc/core/networking/api_error_model.dart';
 
 class ApiErrorHandler {
-  ApiErrorModel handle(dynamic error) {
+  static ApiErrorModel handle(dynamic error) {
     if (error is DioException) {
       switch (error.type) {
         case DioExceptionType.connectionTimeout:
@@ -36,7 +36,7 @@ class ApiErrorHandler {
     }
   }
 
-  ApiErrorModel _handleBadResponse(errorResponse) {
+  static ApiErrorModel _handleBadResponse(errorResponse) {
     return ApiErrorModel(
       message:
           errorResponse['message'] ?? 'Something went wrong, try again later!',
