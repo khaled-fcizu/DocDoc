@@ -8,6 +8,7 @@ part 'api_service.g.dart';
 
 @RestApi(baseUrl: ApiConstants.baseUrl)
 abstract class ApiService {
+  //make apiservice depends on dio
   factory ApiService(Dio dio, {String? baseUrl}) = _ApiService;
 
   @POST(ApiConstants.logIn)

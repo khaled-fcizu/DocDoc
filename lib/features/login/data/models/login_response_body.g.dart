@@ -14,20 +14,7 @@ LoginResponseBody _$LoginResponseBodyFromJson(Map<String, dynamic> json) =>
       useData: json['data'] == null ? null : UserData.fromJson(json['data']),
     );
 
-Map<String, dynamic> _$LoginResponseBodyToJson(LoginResponseBody instance) =>
-    <String, dynamic>{
-      'message': instance.message,
-      'status': instance.status,
-      'code': instance.code,
-      'data': instance.useData,
-    };
-
 UserData _$UserDataFromJson(Map<String, dynamic> json) => UserData(
   token: json['token'] as String?,
   userName: json['username'] as String?,
 );
-
-Map<String, dynamic> _$UserDataToJson(UserData instance) => <String, dynamic>{
-  'token': instance.token,
-  'username': instance.userName,
-};

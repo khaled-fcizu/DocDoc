@@ -1,4 +1,5 @@
 import 'package:docdoc/core/routing/routes.dart';
+import 'package:docdoc/features/home/ui/home_screen.dart';
 import 'package:docdoc/features/login/ui/login_screen.dart';
 import 'package:docdoc/features/onboarding/ui/onboarding_screen.dart';
 import 'package:docdoc/features/sign_up/ui/sign_up_screen.dart';
@@ -13,6 +14,8 @@ abstract class AppRouter {
         return MaterialPageRoute(builder: (_) => SignUpScreen());
       case Routes.loginScreen:
         return MaterialPageRoute(builder: (_) => LoginScreen());
+      case Routes.homeScreen:
+        return MaterialPageRoute(builder: (_) => HomeScreen());
       default:
         return null;
     }
