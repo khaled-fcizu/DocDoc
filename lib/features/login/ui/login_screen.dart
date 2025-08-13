@@ -3,6 +3,7 @@ import 'package:docdoc/core/theming/text_styles.dart';
 import 'package:docdoc/core/widgets/app_button.dart';
 import 'package:docdoc/features/login/logic/login_cubit.dart';
 import 'package:docdoc/features/login/ui/widgets/dont_have_account_text.dart';
+import 'package:docdoc/features/login/ui/widgets/login_bloc_listener.dart';
 import 'package:docdoc/features/login/ui/widgets/login_form.dart';
 import 'package:docdoc/features/login/ui/widgets/terms_and_condations_text.dart';
 import 'package:flutter/material.dart';
@@ -47,6 +48,7 @@ class LoginScreen extends StatelessWidget {
                 TermsAndCondationsText(),
                 verticalSpace(24),
                 DontHaveAccountText(),
+                LoginBlocListener(),
               ],
             ),
           ),

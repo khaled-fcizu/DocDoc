@@ -5,14 +5,14 @@ part 'api_error_model.g.dart';
 class ApiErrorModel {
   final String? message;
   @JsonKey(name: 'data')
-  final Map<String, dynamic>? errorMap;
+  final dynamic errorMap;
   final int? code;
 
   ApiErrorModel({this.message, this.errorMap, this.code});
   factory ApiErrorModel.fromJson(json) => _$ApiErrorModelFromJson(json);
 
-  String getErrorAllMessage() {
-    if (errorMap == null && errorMap == {}) {
+  String getAllErrorMessages() {
+    if (errorMap == null || errorMap!.isEmpty) {
       return message ?? 'Unkown error occures';
     } else {
       return errorMap!.entries

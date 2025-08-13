@@ -36,7 +36,7 @@ class ApiErrorHandler {
     }
   }
 
-  static ApiErrorModel _handleBadResponse(errorResponse) {
+  static ApiErrorModel _handleBadResponse(dynamic errorResponse) {
     return ApiErrorModel(
       message:
           errorResponse['message'] ?? 'Something went wrong, try again later!',

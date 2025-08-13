@@ -39,6 +39,16 @@ abstract class TextStyles {
     color: ColorsManager.darkBlue,
     fontWeight: FontWeightHelper.medium,
   );
+  static TextStyle font15DarkBlueMeduim = TextStyle(
+    fontSize: 15.sp,
+    color: ColorsManager.darkBlue,
+    fontWeight: FontWeightHelper.medium,
+  );
+  static TextStyle font14MainBlueSimiBold = TextStyle(
+    fontSize: 14.sp,
+    color: ColorsManager.mainBlue,
+    fontWeight: FontWeightHelper.semiBold,
+  );
   static TextStyle font32MainBlueBold = TextStyle(
     fontSize: 32.sp,
     color: ColorsManager.mainBlue,
