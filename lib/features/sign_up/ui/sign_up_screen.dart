@@ -3,7 +3,7 @@ import 'package:docdoc/core/theming/text_styles.dart';
 import 'package:docdoc/core/widgets/app_button.dart';
 import 'package:docdoc/core/widgets/app_text_form_field.dart';
 import 'package:docdoc/features/login/ui/widgets/terms_and_condations_text.dart';
-import 'package:docdoc/features/sign_up/ui/already_have_account_text.dart';
+import 'package:docdoc/features/sign_up/ui/widgets/already_have_account_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -26,19 +26,7 @@ class SignUpScreen extends StatelessWidget {
                   style: TextStyles.font15GrayRegular,
                 ),
                 verticalSpace(16),
-                AppTextFormField(hintText: 'Name', validator: (value) {}),
-                verticalSpace(16),
-                AppTextFormField(hintText: 'Phone', validator: (value) {}),
-                verticalSpace(16),
-                AppTextFormField(hintText: 'Email', validator: (value) {}),
-                verticalSpace(16),
-                AppTextFormField(hintText: 'Password', validator: (value) {}),
-                verticalSpace(16),
-                AppTextFormField(
-                  hintText: 'Conferm Password',
-                  validator: (value) {},
-                ),
-                verticalSpace(2 * 16),
+
                 AppButton(onPressed: () {}, buttonText: 'Create Account'),
                 verticalSpace(28),
                 TermsAndCondationsText(),
