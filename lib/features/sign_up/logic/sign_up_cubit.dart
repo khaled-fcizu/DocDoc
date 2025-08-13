@@ -14,7 +14,7 @@ class SignUpCubit extends Cubit<SignUpState> {
   TextEditingController phoneController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   TextEditingController confermPasswordController = TextEditingController();
-  Future<void> signUp() async {
+  Future<void> fetchSignUpStates() async {
     emit(SignUpLoading());
     var response = await _signUpRepo.signUp(
       SignUpRequestBody(
