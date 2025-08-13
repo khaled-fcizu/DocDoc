@@ -14,6 +14,11 @@ abstract class TextStyles {
     color: ColorsManager.darkBlue,
     fontWeight: FontWeightHelper.medium,
   );
+  static TextStyle font13DarkBlueRegular = TextStyle(
+    fontSize: 11.sp,
+    color: ColorsManager.darkBlue,
+    fontWeight: FontWeightHelper.regular,
+  );
   static TextStyle font13GrayRegular = TextStyle(
     fontSize: 13.sp,
     color: ColorsManager.gray,

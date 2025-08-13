@@ -1,10 +1,12 @@
 import 'package:docdoc/core/helpers/spaces_helpers.dart';
 import 'package:docdoc/core/theming/text_styles.dart';
 import 'package:docdoc/core/widgets/app_button.dart';
-import 'package:docdoc/core/widgets/app_text_form_field.dart';
+import 'package:docdoc/features/login/logic/login_cubit.dart';
 import 'package:docdoc/features/login/ui/widgets/dont_have_account_text.dart';
+import 'package:docdoc/features/login/ui/widgets/login_form.dart';
 import 'package:docdoc/features/login/ui/widgets/terms_and_condations_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -27,19 +29,20 @@ class LoginScreen extends StatelessWidget {
                   style: TextStyles.font15GrayRegular,
                 ),
                 verticalSpace(36),
-                AppTextFormField(hintText: 'Email', validator: (value) {}),
-                verticalSpace(16),
-                AppTextFormField(hintText: 'Password', validator: (value) {}),
-                verticalSpace(16),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'Forget Password?',
-                    style: TextStyles.font12MainBlueRegular,
-                  ),
-                ),
+                LoginForm(),
                 verticalSpace(32),
-                AppButton(onPressed: () {}, buttonText: 'Login'),
+                AppButton(
+                  onPressed: () {
+                    if (context
+                        .read<LoginCubit>()
+                        .loginFormKey
+                        .currentState!
+                        .validate()) {
+                      context.read<LoginCubit>().emitLoginStates();
+                    }
+                  },
+                  buttonText: 'Login',
+                ),
                 verticalSpace(32),
                 TermsAndCondationsText(),
                 verticalSpace(24),
