@@ -59,6 +59,7 @@ abstract class TextStyles {
     color: ColorsManager.mainBlue,
     fontWeight: FontWeightHelper.semiBold,
   );
+
   static TextStyle font32MainBlueBold = TextStyle(
     fontSize: 32.sp,
     color: ColorsManager.mainBlue,
@@ -83,5 +84,10 @@ abstract class TextStyles {
     fontSize: 18.sp,
     color: Colors.white,
     fontWeight: FontWeightHelper.semiBold,
+  );
+  static TextStyle font18WhiteMeduim = TextStyle(
+    fontSize: 18.sp,
+    color: Colors.white,
+    fontWeight: FontWeightHelper.medium,
   );
 }
