@@ -22,5 +22,5 @@ abstract class ApiService {
     @Body() SignUpRequestBody signUpRequestBody,
   );
   @GET(ApiConstants.specialityEP)
-  Future<SpecialityResponseModel> getSpecialityData();
+  Future<SpecialityResponseModel> getSpecializationData();
 }

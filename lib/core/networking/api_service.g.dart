@@ -76,7 +76,7 @@ class _ApiService implements ApiService {
   }
 
   @override
-  Future<SpecialityResponseModel> getSpecialityData() async {
+  Future<SpecialityResponseModel> getSpecializationData() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
