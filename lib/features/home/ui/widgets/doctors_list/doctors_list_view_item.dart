@@ -71,6 +71,7 @@ class DoctorsListViewItem extends StatelessWidget {
               Text(
                 doctorModel.email ?? 'doctor@gmail.com',
                 style: TextStyles.font12GrayMeduim,
+                overflow: TextOverflow.ellipsis,
               ),
             ],
           ),

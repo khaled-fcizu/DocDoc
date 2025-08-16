@@ -11,6 +11,7 @@ class HomeCubit extends Cubit<HomeState> {
   List<SpecializationModel>? specializationsList = [];
   Future<void> emitAllSpecializationsStates() async {
     emit(SpecializationLoading());
+    emit(SpecializationLoading());
     var response = await _homeRepo.getSpecializationData();
     response.when(
       success: (specialityResponseModel) {

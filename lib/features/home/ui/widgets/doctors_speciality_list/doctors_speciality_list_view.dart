@@ -37,7 +37,7 @@ class _DoctorsSpecialityListViewState extends State<DoctorsSpecialityListView> {
               );
             },
             child: DoctorsSpecialityListViewItem(
-              specializationModel: widget.specializationsList?[selectedIndex],
+              specializationModel: widget.specializationsList?[index],
               index: index,
               selectedIndex: selectedIndex,
             ),

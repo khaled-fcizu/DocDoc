@@ -55,7 +55,7 @@ abstract class TextStyles {
     fontWeight: FontWeightHelper.bold,
   );
   static TextStyle font16DarkBlueBold = TextStyle(
-    fontSize: 18.sp,
+    fontSize: 16.sp,
     color: ColorsManager.darkBlue,
     fontWeight: FontWeightHelper.bold,
   );
