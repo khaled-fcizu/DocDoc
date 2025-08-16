@@ -33,7 +33,8 @@ abstract class AppRouter {
       case Routes.homeScreen:
         return MaterialPageRoute(
           builder: (_) => BlocProvider(
-            create: (context) => HomeCubit(getIt<HomeRepo>()),
+            create: (context) =>
+                HomeCubit(getIt<HomeRepo>())..emitAllSpecializations(),
             child: HomeScreen(),
           ),
         );

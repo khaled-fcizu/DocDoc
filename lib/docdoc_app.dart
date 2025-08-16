@@ -1,6 +1,7 @@
 import 'package:docdoc/core/routing/app_router.dart';
 import 'package:docdoc/core/routing/routes.dart';
 import 'package:docdoc/core/theming/colors_manager.dart';
+import 'package:docdoc/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -19,7 +20,7 @@ class DocDocApp extends StatelessWidget {
         ),
         debugShowCheckedModeBanner: false,
         onGenerateRoute: AppRouter.onGenerateRoute,
-        initialRoute: Routes.homeScreen,
+        initialRoute: isLoggedIn ? Routes.homeScreen : Routes.onboardingScreen,
       ),
     );
   }

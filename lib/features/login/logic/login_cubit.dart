@@ -1,5 +1,8 @@
+import 'package:docdoc/core/helpers/constants.dart';
+import 'package:docdoc/core/helpers/shared_prefrance_helper.dart';
 import 'package:docdoc/core/networking/api_result.dart';
 import 'package:docdoc/features/login/data/models/login_request_body.dart';
+import 'package:docdoc/features/login/data/models/login_response_body.dart';
 import 'package:docdoc/features/login/data/repos/login_repo.dart';
 import 'package:docdoc/features/login/logic/login_state.dart';
 import 'package:flutter/widgets.dart';
@@ -23,9 +26,17 @@ class LoginCubit extends Cubit<LoginState> {
       failure: (apiErrorModel) {
         emit(LoginFailure(apiErrorModel));
       },
-      success: (loginResponseBody) {
+      success: (loginResponseBody) async {
+        await saveUserToken(loginResponseBody);
         emit(LoginSeccess(loginResponseBody));
       },
+    );
+  }
+
+  Future<void> saveUserToken(LoginResponseBody loginResponseBody) async {
+    await SharedPrefHelper.setSecureString(
+      SharedPrefHelperKeys.userToken,
+      loginResponseBody.useData?.token ?? '',
     );
   }
 }

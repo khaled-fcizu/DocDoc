@@ -23,3 +23,7 @@ extension BuildContextExtention on BuildContext {
 
   void pop() => Navigator.of(this).pop();
 }
+
+extension StringEx on String? {
+  bool isNullOrEmpty() => this == '' || this == null;
+}
