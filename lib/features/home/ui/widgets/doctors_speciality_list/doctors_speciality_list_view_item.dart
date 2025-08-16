@@ -1,6 +1,7 @@
 import 'package:docdoc/core/helpers/spaces_helpers.dart';
 import 'package:docdoc/core/theming/colors_manager.dart';
 import 'package:docdoc/core/theming/text_styles.dart';
+import 'package:docdoc/features/home/data/models/speciality_response_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -9,7 +10,9 @@ class DoctorsSpecialityListViewItem extends StatelessWidget {
     super.key,
     required this.index,
     required this.selectedIndex,
+    required this.specializationModel,
   });
+  final SpecializationModel? specializationModel;
   final int index;
   final int selectedIndex;
   @override
@@ -48,7 +51,7 @@ class DoctorsSpecialityListViewItem extends StatelessWidget {
                 ),
           verticalSpace(12),
           Text(
-            'General',
+            specializationModel?.name ?? 'Name',
             style: index == selectedIndex
                 ? TextStyles.font14DarkBlueBold
                 : TextStyles.font12DarkBlueRegular,

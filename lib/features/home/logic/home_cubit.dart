@@ -15,6 +15,9 @@ class HomeCubit extends Cubit<HomeState> {
     response.when(
       success: (specialityResponseModel) {
         specializationsList = specialityResponseModel.specializationsList ?? [];
+        emitAllDoctorsStates(
+          specailizationId: specializationsList?.first.id ?? 1,
+        );
         emit(
           SpecializationSuccess(
             specialityResponseModel.specializationsList ?? [],
@@ -27,9 +30,9 @@ class HomeCubit extends Cubit<HomeState> {
     );
   }
 
-  void emitAllDoctorsStates(specailizationId) {
+  void emitAllDoctorsStates({required int? specailizationId}) {
     List<DoctorModel>? doctorsList = filterDoctorsBasedOnSpecailizationId(
-      specailizationId,
+      specailizationId: specailizationId,
     );
     if (doctorsList == null || doctorsList.isEmpty) {
       emit(
@@ -42,7 +45,7 @@ class HomeCubit extends Cubit<HomeState> {
     }
   }
 
-  filterDoctorsBasedOnSpecailizationId(specailizationId) {
+  filterDoctorsBasedOnSpecailizationId({required int? specailizationId}) {
     return specializationsList
         ?.firstWhere((element) => element.id == specailizationId)
         .doctorsList;

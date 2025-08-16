@@ -18,6 +18,7 @@ class DioFactory {
         ..receiveTimeout = defaultTimeout;
       _addDioPrettyLoggerToInterceptors();
       _addDioHeaders();
+      _addDioInterceptorWrapper();
       return dio!;
     } else {
       return dio!;
@@ -40,7 +41,7 @@ class DioFactory {
     dio!.options.headers = {'Accept': 'application/json'};
   }
 
-  static void addDioInterceptorWrapper() {
+  static void _addDioInterceptorWrapper() {
     dio!.interceptors.add(
       InterceptorsWrapper(
         onRequest: (options, handler) async {
