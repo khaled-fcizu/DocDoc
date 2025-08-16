@@ -12,9 +12,8 @@ class HomeState with _$HomeState {
   ) = SpecializationSuccess;
   const factory HomeState.specializationError(ApiErrorModel apiErrorModel) =
       SpecializationError;
-  const factory HomeState.doctorsSuccess(
-    List<DoctorModel> specializationsList,
-  ) = DoctorsSuccess;
+  const factory HomeState.doctorsSuccess(List<DoctorModel> doctorsList) =
+      DoctorsSuccess;
   const factory HomeState.doctorsError(ApiErrorModel apiErrorModel) =
       DoctorsError;
 }
