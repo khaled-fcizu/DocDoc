@@ -28,7 +28,7 @@ class HomeCubit extends Cubit<HomeState> {
   }
 
   void emitAllDoctorsStates(specailizationId) {
-    List<DoctorModel>? doctorsList = filterDoctorBasedOnSpecailization(
+    List<DoctorModel>? doctorsList = filterDoctorsBasedOnSpecailizationId(
       specailizationId,
     );
     if (doctorsList == null || doctorsList.isEmpty) {
@@ -42,7 +42,7 @@ class HomeCubit extends Cubit<HomeState> {
     }
   }
 
-  filterDoctorBasedOnSpecailization(specailizationId) {
+  filterDoctorsBasedOnSpecailizationId(specailizationId) {
     return specializationsList
         ?.firstWhere((element) => element.id == specailizationId)
         .doctorsList;

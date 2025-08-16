@@ -90,6 +90,11 @@ abstract class TextStyles {
     color: ColorsManager.darkBlue,
     fontWeight: FontWeightHelper.regular,
   );
+  static TextStyle font14DarkBlueBold = TextStyle(
+    fontSize: 14.sp,
+    color: ColorsManager.darkBlue,
+    fontWeight: FontWeightHelper.bold,
+  );
   static TextStyle font13MainBlueSemiBold = TextStyle(
     fontSize: 13.sp,
     color: ColorsManager.mainBlue,
