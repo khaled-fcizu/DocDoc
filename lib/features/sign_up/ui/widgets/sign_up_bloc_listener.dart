@@ -29,6 +29,7 @@ class SignUpBlocListener extends StatelessWidget {
             setUpSuccessState(context);
           },
           signUpError: (apiErrorModel) {
+            context.pop();
             setUpErrorState(context, apiErrorModel);
           },
         );

@@ -72,8 +72,18 @@ class _LoginFormState extends State<LoginForm> {
           AppTextFormField(
             hintText: 'Password',
             validator: (value) {
-              if (value == null || value == '') {
-                return 'password not valid';
+              if (value == null || value.isEmpty) {
+                return 'Password is required';
+              } else if (!AppRegex.hasMinLength(value)) {
+                return 'at least 8 characters required';
+              } else if (!AppRegex.hasLowerCase(value)) {
+                return 'doesn\'t have lower case';
+              } else if (!AppRegex.hasUpperCase(value)) {
+                return 'doesn\'t have upper case';
+              } else if (!AppRegex.hasNumber(value)) {
+                return 'doesn\'t have number';
+              } else if (!AppRegex.hasSpecialCharacter(value)) {
+                return 'doesn\'t have special character';
               }
             },
             controller: context.read<LoginCubit>().passwordController,

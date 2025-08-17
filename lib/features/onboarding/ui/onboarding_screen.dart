@@ -3,7 +3,6 @@ import 'package:docdoc/features/onboarding/ui/widgets/doctor_and_faded_logo_and_
 import 'package:docdoc/features/onboarding/ui/widgets/logo_and_docdoc_text.dart';
 import 'package:docdoc/features/onboarding/ui/widgets/text_and_get_started_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
@@ -13,18 +12,15 @@ class OnboardingScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
-          child: Padding(
-            padding: EdgeInsets.symmetric(vertical: 30.h),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                LogoAndDocdocText(),
-                verticalSpace(42),
-                DoctorAndFadedLogoAndText(),
-                // verticalSpace(16),
-                TextAndGetStartedButton(),
-              ],
-            ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              verticalSpace(10),
+              LogoAndDocdocText(),
+              verticalSpace(30),
+              DoctorAndFadedLogoAndText(),
+              TextAndGetStartedButton(),
+            ],
           ),
         ),
       ),
